@@ -1233,6 +1233,23 @@
   \*-----------------------------------*/
   
   /**
+   * responsive smaller than 450px screen
+   */
+  
+   @media (max-width: 450px) {
+  
+    /**
+     * nav links
+     */
+  
+    .navbar-link{ font-size: var(--fs-4);}
+  
+  
+  }
+
+
+
+  /**
    * responsive larger than 450px screen
    */
   
@@ -1243,8 +1260,8 @@
      */
   
     .clients-item { min-width: calc(33.33% - 10px); }
-  
-  
+
+    .navbar-link{ font-size: var(--fs-5);}
   
     /**
      * #PORTFOLIO, BLOG 
@@ -1380,7 +1397,7 @@
   
     .navbar-list { gap: 20px; }
   
-    .navbar-link { --fs-8: 14px; }
+    .navbar-link { --fs-8: 16px; }
   
   
   
@@ -1579,7 +1596,7 @@
      * NAVBAR
      */
   
-    .navbar-link { --fs-8: 15px; }
+    .navbar-link { --fs-8: 16px; }
   
   
   
