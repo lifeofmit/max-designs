@@ -51,7 +51,7 @@ copyright 2025 Mit Joshi
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
 
   <!-- custom css link-->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -230,13 +230,20 @@ copyright 2025 Mit Joshi
         </header>
 
         <section class="about-text">
-          <p>At Max Designs, we craft <span class="about-text-highlight">premium logos, company stationery, graphics,
-              and websites </span>that align seamlessly with your brand. Our mission is to turn complex ideas into
-            elegant, user-friendly, and visually striking solutions.</p>
+          <p>
+            At Max Designs, we craft
+            <span class="about-text-highlight">premium logos, company stationery, graphics, and websites </span>that
+            align seamlessly with your brand. Our mission is to turn
+            complex ideas into elegant, user-friendly, and visually striking
+            solutions.
+          </p>
 
-          <p>With creativity and functionality at our core, <span class="about-text-highlight">we deliver impactful
-              designs worldwide. </span>From professional logos to full brand identities and seamless websites, we bring
-            your vision to life with a personal touch.</p>
+          <p>
+            With creativity and functionality at our core,
+            <span class="about-text-highlight">we deliver impactful designs worldwide. </span>From professional logos to
+            full brand identities and seamless
+            websites, we bring your vision to life with a personal touch.
+          </p>
         </section>
 
         <!--
@@ -331,8 +338,10 @@ copyright 2025 Mit Joshi
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Max Designs team transformed our website into a visually stunning and user-friendly platform. Their
-                    expertise in website design exceeded our expectations. Highly recommended!
+                    Max Designs team transformed our website into a visually
+                    stunning and user-friendly platform. Their expertise in
+                    website design exceeded our expectations. Highly
+                    recommended!
                   </p>
                 </div>
               </div>
@@ -350,8 +359,10 @@ copyright 2025 Mit Joshi
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Max Designs exceeded our expectations with their exceptional expertise in ecommerce website design.
-                    The team's dedication and creativity resulted in a visually stunning and user-friendly online store.
+                    Max Designs exceeded our expectations with their
+                    exceptional expertise in ecommerce website design. The
+                    team's dedication and creativity resulted in a visually
+                    stunning and user-friendly online store.
                   </p>
                 </div>
               </div>
@@ -369,8 +380,10 @@ copyright 2025 Mit Joshi
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    District98.org's website development by Ocean Technolab was a seamless experience. They captured our
-                    organization's essence perfectly, delivering a modern and intuitive website.
+                    District98.org's website development by Ocean Technolab
+                    was a seamless experience. They captured our
+                    organization's essence perfectly, delivering a modern and
+                    intuitive website.
                   </p>
                 </div>
               </div>
@@ -753,7 +766,6 @@ copyright 2025 Mit Joshi
           </div>
 
           <ul class="project-list">
-
             <li class="project-item active" data-filter-item data-category="logos">
               <a href="#">
                 <figure class="project-img">
@@ -1143,7 +1155,6 @@ copyright 2025 Mit Joshi
                 <p class="project-category">Logos</p>
               </a>
             </li>
-
           </ul>
         </section>
       </article>
@@ -1383,7 +1394,35 @@ copyright 2025 Mit Joshi
 
   <!-- custom js link-->
   <script src="./assets/js/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function activatePageFromHash() {
+        if (window.location.hash) {
+          const hash = window.location.hash.substring(1); // Remove the '#' from the hash
+          const targetPage = document.querySelector(`[data-page="${hash}"]`);
 
+          if (targetPage) {
+            // Deactivate all pages
+            document
+              .querySelectorAll("[data-page]")
+              .forEach((page) => page.classList.remove("active"));
+
+            // Activate the target page
+            targetPage.classList.add("active");
+
+            // Scroll to the top of the page
+            window.scrollTo(0, 0);
+          }
+        }
+      }
+
+      // Activate the page based on the initial hash
+      activatePageFromHash();
+
+      // Listen for hash changes
+      window.addEventListener("hashchange", activatePageFromHash);
+    });
+  </script>
   <!-- ionicon link-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
